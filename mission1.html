@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--CSS file-->
+    <link rel="stylesheet" href="mission1.css" />
+
+    <title>Mission 1</title>
+  </head>
+
+  <!--Main HTML-->
+  <body>
+    <!-- Nav Bar -->
+    <div class="container">
+      <header class="navbar">
+        <div class="left"><span>C</span>osmic <span>D</span>esigns</div>
+        <nav class="right">
+          <a class="icons" href="#work">Work</a>
+          <a class="icons" href="#contactForm">Contact</a>
+          <a href="#dribble">
+            <img class="icons" src="images/dribble_icon.png" alt="" />
+          </a>
+          <a href="#dribble">
+            <img class="icons" src="images/insta_icon.png" alt="" />
+          </a>
+          <a href="#dribble">
+            <img class="icons" src="images/v_icon.png" alt="" />
+          </a>
+        </nav>
+        <div class="hamburger">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </header>
+
+      <nav class="mobileNav">
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+        <a href="#dribble">
+          <img src="images/dribble_icon.png" alt="" />
+        </a>
+        <a href="#dribble">
+          <img src="images/insta_icon.png" alt="" />
+        </a>
+        <a href="#dribble">
+          <img src="images/v_icon.png" alt="" />
+        </a>
+      </nav>
+
+      <!-- Image Grid  -->
+      <div class="project-grid">
+        <div class="project" id="purp">
+          <img src="images/purpleball.jpg" alt="" />
+          <p class="overlay white">VIEW GALLERY</p>
+        </div>
+        <div class="project" id="ycar">
+          <img src="images/yellowcar.jpg" alt="" />
+          <p class="overlay white">VIEW GALLERY</p>
+        </div>
+        <div class="project" id="traveler">
+          <img src="images/traveler.avif" alt="" />
+          <p class="overlay">VIEW GALLERY</p>
+        </div>
+        <div class="project" id="cube">
+          <img src="images/cube.avif" alt="" />
+          <p class="overlay white">VIEW GALLERY</p>
+        </div>
+        <div class="project" id="astro">
+          <img src="images/astro.avif" alt="" />
+          <p class="overlay white">VIEW GALLERY</p>
+        </div>
+        <div class="project" id="cup">
+          <img src="images/cup.avif" alt="" />
+          <p class="overlay">VIEW GALLERY</p>
+        </div>
+        <div class="project" id="insta">
+          <img src="images/insta.avif" alt="" />
+          <p class="overlay white">VIEW GALLERY</p>
+        </div>
+        <div class="project" id="foam">
+          <img src="images/foam.avif" alt="" />
+          <p class="overlay">VIEW GALLERY</p>
+        </div>
+        <div class="project" id="dimensional">
+          <img src="images/dimensional.avif" alt="" />
+          <p class="overlay white">VIEW GALLERY</p>
+        </div>
+      </div>
+
+      <!-- Contact Form  -->
+      <div class="container2" id="contactForm">
+        <h1>Interested?</h1>
+        <form>
+          <div class="input-group">
+            <input type="text" id="name" name="name" required />
+            <label for="name">Your Name</label>
+          </div>
+          <div class="input-group">
+            <input type="email" id="email" name="email" required />
+            <label for="email">Your Email</label>
+          </div>
+          <div class="input-group">
+            <textarea id="message" name="message" required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button class="glow-on-hover" type="submit">Send Message</button>
+        </form>
+      </div>
+      <footer class="footer">
+        Created by JV Villanueva. Mission Ready Candidate.
+      </footer>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

@@ -1,0 +1,436 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF8E8;
+    /* background-color: black; */
+}
+
+/* Container */
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Nav CSS */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0;
+    
+}
+
+.navbar .left {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.navbar .left:hover {
+    transform: rotate(3deg) scale(1.1);
+    cursor: pointer;
+}
+
+span {
+    color: #990D35;
+    font-size: 50px;
+}
+
+.navbar .right {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .right a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .right a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.navbar .right img {
+    width: 24px;
+    height: 24px;
+    
+}
+
+.icons:hover {
+    animation: bounce 0.3s ease-in-out infinite;
+    animation-fill-mode: forwards;
+    
+}
+
+.bar1,.bar2,.bar3 {
+    background-color: black;
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.navbar .hamburger {
+    display: none;
+}
+
+.navbar .hamburger:hover {
+    cursor: pointer;
+}
+
+
+/* Side Navbar */
+.mobileNav  {
+    width: 80px;
+    background-color: rgb(216, 214, 214);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: -160px;
+    padding: 16px;
+    transition: transform 0.5s;
+}
+
+.mobileNav img  {
+    width: 24px;
+    height: 24px;
+}
+
+.openDrawer {
+    transform: translateX(-160px);
+}
+
+.mobileNav a {
+    text-decoration: none;
+    color: black;
+    margin: 16px 0;
+}
+
+.mobileNav a:hover {
+    text-decoration: underline;
+}
+
+/* Grid css */
+.project-grid {
+    display: grid;
+    grid-template-areas: 
+    "purp purp ycar"
+    "purp purp traveler"
+    "astro cube traveler"
+    "cup insta insta"
+    "cup insta insta"
+    "foam foam dim"
+    "foam foam dim";
+    gap: 16px;
+    width: 100%;
+}
+
+#purp {
+    grid-area: purp;
+}
+
+#ycar {
+    grid-area: ycar;
+}
+
+#traveler  {
+    grid-area: traveler;
+}
+
+#astro {
+    grid-area: astro;
+}
+
+#cube {
+    grid-area: cube;
+}
+
+#cup {
+    grid-area: cup;
+}
+
+#insta {
+    grid-area: insta;
+}
+
+#foam {
+    grid-area: foam;
+}
+
+#dimensional {
+    grid-area: dim;
+}
+
+.project {
+    /* width: 600px; */
+    position: relative;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.project:hover img{
+    transform: scale(1) rotate(-3deg);
+}
+
+.project .overlay {
+    background-color: rgba(255,255,255, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1) rotate(360deg);
+    transition: all 1.4s ease-in-out;
+}
+
+.overlay.white {
+    color:white;
+}
+
+/* Contact Form CSS  */
+.container2 {
+    max-width: 400px;
+    margin: 50px auto 10px auto;
+    padding: 20px;
+    background-color: #FCD581;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+.container2:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s;
+  }
+  
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+form {
+    display: grid;
+    grid-gap: 20px;
+  }
+  
+.input-group {
+    position: relative;
+  }
+  
+.input-group input,
+.input-group textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #5f9ea0;
+  }
+  
+.input-group label {
+    position: absolute;
+    top: -16px;
+    left: 10px;
+    font-size: 12px;
+    color: #999;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label {
+    top: -20px;
+    font-size: 10px;
+    color: #5f9ea0;
+  }
+  
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #990D35;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 2s ease;
+  }
+  
+button[type="submit"]:hover {
+    background-color: #D52941;
+  }
+
+.footer {
+    padding: 64px;
+    text-align: center;
+
+}
+
+/* Media Query */
+@media only screen and (max-width: 1100px) {
+    .container {
+        max-width: 100%;
+    }
+    .project-grid {
+        max-width: 100%;
+        grid-template-areas: 
+            "purp purp"
+            "ycar ycar"
+            "astro cube"
+            "insta insta"
+            "cup foam"
+            "dim dim"
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .project-grid {
+        margin-top: 100px;
+    }
+
+    .navbar {
+        padding: 20px 24px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: rgb(216, 214, 214);
+        width: 100%;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar .right {
+        display: none;
+    }
+    .project-grid {
+        grid-template-areas: 
+            "purp purp"
+            "ycar ycar"
+            "traveler traveler"
+            "astro cube"
+            "insta insta"
+            "cup cup"
+            "foam foam"
+            "dim dim";
+    }
+    .project .overlay {
+        font-size: 24px;
+    }
+
+    .footer {
+        padding: 32px;
+        font-size: 14px;
+    }
+}
+
+    
+
+/* hamburger animation */
+.animateBar1 {
+        animation: flipBar1 1s;
+        animation-fill-mode: forwards;
+    }
+
+.animateBar2 {
+        animation: fadeBar2 1s;
+        animation-fill-mode: forwards;
+    }
+
+.animateBar3{
+        animation: flipBar3 1s;
+        animation-fill-mode: forwards;
+    }
+
+
+
+    /* keyframes */
+    @keyframes flipBar1 {
+        from {
+            transform: rotate(0);
+        }
+
+        to {
+            transform: rotate(45deg) translate(4px, 10px);
+        }
+    }
+
+
+    @keyframes fadeBar2 {
+        from {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+        to {
+            transform: scaleX(0);
+            opacity: 0;
+        }
+    }
+
+    @keyframes flipBar3 {
+        from {
+            transform: rotate(0);
+        }
+
+        to {
+            transform: rotate(-45deg) translate(4px, -10px);
+        }
+    }
+
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0) rotate(15deg);
+        }
+
+        100% {
+            transform: translateY(-10px) rotate(-15deg);
+            
+        }
+    }
